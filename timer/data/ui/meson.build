@@ -1,0 +1,3 @@
+blueprints = files(
+'MainWindow.blp'
+)

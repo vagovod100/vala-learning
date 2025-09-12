@@ -16,6 +16,66 @@ template $MainWindow: Adw.ApplicationWindow {
 
     content: Box {
       orientation: vertical;
+      spacing: 10;
+
+      Box {
+        orientation: horizontal;
+        spacing: 10;
+
+        Box {
+          orientation: vertical;
+          // spacing: 10;
+          Button {
+            label: "+";
+          }
+
+          Entry {}
+
+          Button {
+            label: "-";
+          }
+        }
+
+        Label {
+          label: ":";
+        }
+
+        Box {
+          orientation: vertical;
+          // spacing: 10;
+          Button {
+            label: "+";
+          }
+
+          Entry {}
+
+          Button {
+            label: "-";
+          }
+        }
+
+        Label {
+          label: ":";
+        }
+
+        Box {
+          orientation: vertical;
+          // spacing: 10;
+          Button {
+            label: "+";
+          }
+
+          Entry {}
+
+          Button {
+            label: "-";
+          }
+        }
+      }
+
+      Button {
+        label: _("Start");
+      }
     };
   };
 }

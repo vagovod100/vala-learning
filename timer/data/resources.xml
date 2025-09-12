@@ -1,5 +1,5 @@
 <gresources>
   <gresource prefix="/com/vagovod/Timer">
-    <file>MainWindow.ui</file>
+    <file alias="MainWindow.ui">ui/MainWindow.ui</file>
   </gresource>
 </gresources>

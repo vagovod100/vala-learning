@@ -1,0 +1,7 @@
+.timer-spinbutton {
+	font-size: 42pt;
+}
+
+.timer-spinbutton > text {
+	padding: 0px 7px;
+}

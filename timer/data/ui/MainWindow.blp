@@ -14,68 +14,42 @@ template $MainWindow: Adw.ApplicationWindow {
       };
     }
 
-    content: Box {
-      orientation: vertical;
-      spacing: 10;
+    content: Adw.Clamp {
+      hexpand: true;
+      vexpand: true;
+      valign: center;
 
-      Box {
-        orientation: horizontal;
-        spacing: 10;
+      child: Box {
+        orientation: vertical;
+        spacing: 24;
+        margin-top: 24;
+        margin-bottom: 24;
+        margin-start: 24;
+        margin-end: 24;
+        halign: center;
 
-        Box {
-          orientation: vertical;
-          // spacing: 10;
-          Button {
-            label: "+";
-          }
+        // Ряд с тремя сегментами
+        Grid {
+          halign: center;
+          valign: center;
+          column-spacing: 6;
 
-          Entry {}
-
-          Button {
-            label: "-";
-          }
+          SpinButton {
+              width-chars: 2;
+              text: "0";
+              xalign: 0.5;
+              orientation: vertical;
+              adjustment: Adjustment { upper:23; step-increment: 1; page-increment: 10; };
+              numeric: true;
+              wrap: true;
+              css-classes: ["timer-spinbutton"];
+            }
         }
 
-        Label {
-          label: ":";
+        Button {
+          label: _("Start");
         }
-
-        Box {
-          orientation: vertical;
-          // spacing: 10;
-          Button {
-            label: "+";
-          }
-
-          Entry {}
-
-          Button {
-            label: "-";
-          }
-        }
-
-        Label {
-          label: ":";
-        }
-
-        Box {
-          orientation: vertical;
-          // spacing: 10;
-          Button {
-            label: "+";
-          }
-
-          Entry {}
-
-          Button {
-            label: "-";
-          }
-        }
-      }
-
-      Button {
-        label: _("Start");
-      }
+      };
     };
   };
 }

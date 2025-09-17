@@ -29,25 +29,82 @@ template $MainWindow: Adw.ApplicationWindow {
         halign: center;
 
         // Ряд с тремя сегментами
-        Grid {
+        Box {
+          orientation: horizontal;
           halign: center;
-          valign: center;
-          column-spacing: 6;
+          spacing: 6;
 
-          SpinButton {
-              width-chars: 2;
-              text: "0";
-              xalign: 0.5;
-              orientation: vertical;
-              adjustment: Adjustment { upper:23; step-increment: 1; page-increment: 10; };
-              numeric: true;
-              wrap: true;
-              css-classes: ["timer-spinbutton"];
-            }
+          SpinButton hours_spin {
+            halign: center;
+            orientation: vertical;
+            wrap: true;
+            value: 0;
+            climb-rate: 1;
+            width-chars: 2;
+            xalign: 0.5;
+            numeric: true;
+
+            adjustment: Adjustment {
+                lower: 0;
+                upper: 23;
+                step-increment: 1;
+                value: 0;
+              };
+          }
+
+          Label {
+            label: ":";
+            css-classes: ["title-4"];
+          }
+
+          SpinButton minutes_spin {
+            halign: center;
+            orientation: vertical;
+            wrap: true;
+            value: 0;
+            climb-rate: 1;
+            width-chars: 2;
+            xalign: 0.5;
+            numeric: true;
+
+            adjustment: Adjustment {
+                lower: 0;
+                upper: 59;
+                step-increment: 1;
+                value: 0;
+              };
+          }
+
+          Label {
+            label: ":";
+            css-classes: ["title-4"];
+          }
+
+          SpinButton seconds_spin {
+            halign: center;
+            orientation: vertical;
+            wrap: true;
+            value: 0;
+            climb-rate: 1;
+            width-chars: 2;
+            xalign: 0.5;
+            numeric: true;
+
+            adjustment: Adjustment {
+                lower: 0;
+                upper: 59;
+                step-increment: 1;
+                value: 0;
+              };
+          }
         }
 
-        Button {
+        Button start_button{
           label: _("Start");
+
+          styles [
+            "suggested-action",
+          ]
         }
       };
     };

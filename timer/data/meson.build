@@ -1,5 +1,3 @@
-gnome = import('gnome')
-
 subdir('ui')
 
 gresources = gnome.compile_resources(

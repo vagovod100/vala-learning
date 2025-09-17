@@ -2,7 +2,7 @@ executable(
   'timer',
   sources: [
     'main.vala',
-    'MainWindow.vala',
+    'main-window.vala',
     timer_resources
   ],
   dependencies: [adw_dep]

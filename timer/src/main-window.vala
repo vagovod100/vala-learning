@@ -1,4 +1,4 @@
-[GtkTemplate (ui = "/com/vagovod/Timer/MainWindow.ui")]
+[GtkTemplate (ui = "/com/vagovod/Timer/main-window.ui")]
 public class MainWindow : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.SpinButton hours_spin;
@@ -13,10 +13,6 @@ public class MainWindow : Adw.ApplicationWindow {
     public MainWindow (App app) {
         Object (application: app);
 
-        start_button.clicked.connect(
-            () => {
-                stdout.printf("%s : %s : %s\n", hours_spin.text, minutes_spin.text, seconds_spin.text);
-            }
-        );
+        
     }
 }

@@ -33,6 +33,7 @@ template $MainWindow: Adw.ApplicationWindow {
           orientation: horizontal;
           halign: center;
           spacing: 6;
+          styles ["title-1"]
 
           SpinButton hours_spin {
             halign: center;
@@ -43,6 +44,7 @@ template $MainWindow: Adw.ApplicationWindow {
             width-chars: 2;
             xalign: 0.5;
             numeric: true;
+            styles ["title-1"]
 
             adjustment: Adjustment {
                 lower: 0;
@@ -54,7 +56,7 @@ template $MainWindow: Adw.ApplicationWindow {
 
           Label {
             label: ":";
-            css-classes: ["title-4"];
+            styles ["title-1"]
           }
 
           SpinButton minutes_spin {
@@ -66,6 +68,7 @@ template $MainWindow: Adw.ApplicationWindow {
             width-chars: 2;
             xalign: 0.5;
             numeric: true;
+            styles ["title-1"]
 
             adjustment: Adjustment {
                 lower: 0;
@@ -77,7 +80,7 @@ template $MainWindow: Adw.ApplicationWindow {
 
           Label {
             label: ":";
-            css-classes: ["title-4"];
+            styles ["title-1"]
           }
 
           SpinButton seconds_spin {
@@ -89,6 +92,7 @@ template $MainWindow: Adw.ApplicationWindow {
             width-chars: 2;
             xalign: 0.5;
             numeric: true;
+            styles ["title-1"]
 
             adjustment: Adjustment {
                 lower: 0;
